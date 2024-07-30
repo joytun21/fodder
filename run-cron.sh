@@ -1,7 +1,6 @@
 #!/bin/bash
 clear
 
-export PATH=/luna/run
 # // Menjalankan Pungsi Dengan Crontab
 ########################################
 ### MEMASANG PUNGSI AUTO KE CRONTAB ###
@@ -9,6 +8,7 @@ export PATH=/luna/run
 echo " Memasang autobackup ke cron.d "
 # // Jalankan pungsi Limit-ssh setiap 1 menit
 echo "*/50 * * * *  root /usr/local/sbin/otwbackup" >>/etc/cron./otwbackup
+echo "*/50 * * * *  root /usr/local/sbin/otwbackup-gd" >>/etc/cron./otwbackup-gd
 sleep 1
 echo " Memasang Clear Cache ke cron.d"
 # // Jalankan pungsi Limit-ssh setiap 1 menit
